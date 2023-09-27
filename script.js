@@ -11,7 +11,8 @@ function addElementFunc() {
     console.log(todoElContain.childElementCount)
     emtySpan.style = 'display: none'
     let todoElement = document.createElement('div');
-    todoElement.classList.toggle('todoElementStyle');
+    // todoElement.classList.toggle('todoElementStyle');
+    todoElement.setAttribute('class', 'todoEl')
 
     let todoElementDiscraption = document.createElement('h2');
     if (addInp.value) {
@@ -55,3 +56,16 @@ function delElementFunc(e) {
         
     }
  })
+
+ const resetBtn = document.querySelector('.material-symbols-outlined');
+ let todoEl = document.querySelectorAll('.todoEl')
+ resetBtn.addEventListener('click', resetFunc)
+
+ function resetFunc() {
+    todoNum = 0
+    todosAllSpan.innerHTML = todoNum;
+    emtySpan.style = 'display: block';
+    while (todoElContain.firstChild) {
+        todoElContain.removeChild(todoElContain.firstChild);
+    }
+ }
