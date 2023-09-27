@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: rgb(19, 1, 34);
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    box-shadow: 0 0 25px blueviolet;
+    position: absolute;
+    top: 0;
+}
+.header-contain {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 118, 230);
+    justify-content: space-between;
+}
+.header-contain h1 {
+    
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    box-shadow: 0 0 25px blueviolet;
+    position: absolute;
+    bottom: 0;
+}
+.footer-contain {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 118, 230);
+    justify-content: space-between;
+}
+.footer-contain h1 {
+    color: rgb(255, 118, 230);
+}
+
+.todo-block {
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgb(255, 118, 230);
+}
+
+.title-box {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 118, 230);
+    color: rgb(136, 4, 112);
+}
+.title-box h2, p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.todo-el-contain {
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: blueviolet;
+}
+
+.todo-added-contain {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+}
+.todo-added-contain input {
+    width: 400px;
+    padding-left: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 118, 230);
+    color: rgb(136, 4, 112);
+}
+.todo-added-contain input::placeholder {
+    color: rgb(136, 4, 112);
+}
+
+.todo-added-contain button {
+    background-color: rgb(255, 0, 208);
+    border: none;
+    outline: none;
+    width: 100px
+}
+.todo-added-contain button:hover {
+    background-color: rgb(255, 67, 221);
+    cursor: pointer;
+}
+.todo-added-contain button:active {
+    background-color: rgb(199, 40, 170);
+}
+
+.todoElementStyle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid rgb(29, 0, 24); */
+}
+
+.todoElementStyle h2 {
+    padding-left: 10px;
+    color: rgb(51, 0, 42);
+}
+.todoElementStyle button {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 0, 208);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.todoElementStyle button:hover {
+    background-color: rgb(255, 67, 221);
+    cursor: pointer;
+}
+.todoElementStyle button:active {
+    background-color: rgb(199, 40, 170);
+}
+
+
+#emtySpan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .5;
+}
+
+.todo-el-contain::-webkit-scrollbar {
+    width: 12px;
+  }
+  .todo-el-contain::-webkit-scrollbar-track {
+    background: rgb(199, 40, 170);
+  }
+  .todo-el-contain::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 67, 221);
+    border-radius: 20px;
+  }
