@@ -2,12 +2,12 @@ const addInp = document.getElementById('addInp');
 const addBtn = document.getElementById('addBtn');
 const todoElContain = document.querySelector('.todo-el-contain');
 
-let todoNum = 0;
+let todoSum = todoElContain.childElementCount;
 addBtn.addEventListener('click', addElementFunc);
 
 function addElementFunc() {
-    todoNum++
-    todosAllSpan.innerHTML = todoNum
+    let todoSum = todoElContain.childElementCount;
+    todosAllSpan.innerHTML = todoSum + 1;
     console.log(todoElContain.childElementCount)
     emtySpan.style = 'display: none'
     let todoElement = document.createElement('div');
@@ -19,7 +19,7 @@ function addElementFunc() {
         todoElementDiscraption.innerHTML = addInp.value;
     }
     else {
-        todoElementDiscraption.innerHTML = 'Задача №' + todoNum;
+        todoElementDiscraption.innerHTML = 'Задача №' + (todoSum + 1);
     }
 
     let delBtn = document.createElement('button');
@@ -34,10 +34,9 @@ function addElementFunc() {
 }
 
 function delElementFunc(e) {
-    todoNum--;
     e.target.parentElement.remove();
-    todosAllSpan.innerHTML = todoNum;
-    if (todoNum == 0) {
+    todosAllSpan.innerHTML = todoElContain.childElementCount;
+    if (todoSum == 0) {
         emtySpan.style = 'display: block';
     }
 
@@ -62,8 +61,7 @@ function delElementFunc(e) {
  resetBtn.addEventListener('click', resetFunc)
 
  function resetFunc() {
-    todoNum = 0
-    todosAllSpan.innerHTML = todoNum;
+    todosAllSpan.innerHTML = todoSum;
     emtySpan.style = 'display: block';
     while (todoElContain.firstChild) {
         todoElContain.removeChild(todoElContain.firstChild);
